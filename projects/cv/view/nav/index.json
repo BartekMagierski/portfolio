@@ -1,0 +1,22 @@
+{
+  "list": null,
+	"enabled": null,
+  "disabled": null, 
+	"example": {
+		"schema": [
+			"K3BnDc",
+			{
+				"label": "lvl-1",
+				"list": [
+					"test1", "test2", {
+					"label": "lvl-2",
+						"list": [
+							"test3"
+							]
+						}
+					]
+			}
+		]
+	}
+
+}

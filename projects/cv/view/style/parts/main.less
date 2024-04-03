@@ -1,0 +1,138 @@
+&[css='default']{
+  & > .wrapper {
+    padding: @space;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 55mm auto;
+    overflow: hidden;
+    aside {
+
+      padding: @space;
+      background-color: @c[boxBack2];
+      color: @c[font2];
+      
+      .me {
+        padding: @space 0;
+        h1 {
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+        p {
+          font-size: 1rem;
+          font-weight: 400;
+        }
+      }
+
+      figure {
+        div {
+          height: 25rem;
+          position: relative;
+          overflow: hidden;
+          img {
+            width: auto;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+          }
+        }
+        
+        figcaption {
+          margin-top: @space;
+          border-top: solid .5mm;
+          text-align: left;
+          div {
+            margin-top: @space;
+            p {
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+      }
+    }
+    .cv {
+      padding: @space;
+      background-color: whitesmoke;
+      display: grid;
+      align-content: space-between;
+      & > .cvSection {
+        padding: @space;
+        background-color: @c[boxBack1];
+        color: @c[font1];
+        &:nth-of-type(n+1):nth-of-type(n+2) {
+          margin-top: @space;
+        }
+      }
+      .opis {
+        padding: @space;
+        font-weight: 350;
+        text-align: justify;
+        hyphens: auto;
+        background-color: @c[boxBack2];
+        color: @c[font2];
+        p {
+          letter-spacing: initial;
+        }
+      }
+      
+      .title {
+        text-align: center;
+        margin-bottom: @space;
+      }
+
+      .work {
+        text-align: left;
+        .job {
+
+          display: grid;
+          grid-template-areas: 'company date' 'position ...' 'describe describe';
+          padding: @space;
+          background-color: white;
+          
+          &:nth-last-of-type(n+1):not(:nth-last-of-type(1)) {
+            margin-bottom: @space;
+          }
+
+          .company {
+            grid-area: company;
+          }
+          .position {
+            grid-area: position;
+            font-size: 1.2rem;
+            font-weight: 300;
+            font-family: Sono, sans-serif;
+          }
+          .date {
+            grid-area: date;
+            justify-self: end;
+            font-size: 1.1rem;
+            font-weight: 300;
+            font-family: Sono, sans-serif;
+          }
+          .describe {
+            grid-area: describe;
+            font-size: 1.2rem;
+            padding: .25rem 0 0 .5rem;
+          }
+
+        }
+      }
+
+      .skils {
+        padding: 0 @space @space @space;
+      }
+
+      .rodo {
+        margin-top: @space;
+        p {
+          font-size: .9rem;
+          font-weight: 200;
+          text-align: justify;
+          hyphens: auto;
+        }
+      
+      }
+    }
+  }
+}

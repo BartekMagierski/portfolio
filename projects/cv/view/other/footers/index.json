@@ -1,0 +1,12 @@
+{
+  "templates": {
+    "default": "../view/other/footers/templates/default.html" 
+  },
+  "list": [
+    {
+      "id": "main",
+      "template": "default",
+      "cfg": null
+    }
+  ]
+}

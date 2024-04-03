@@ -1,0 +1,134 @@
+.popupBox {
+  position: absolute;
+  z-index: 91;
+
+  /* Open/close animation */
+  opacity: 0;
+    
+  animation-name: showBox;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  @keyframes showBox {
+    from {
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+  @keyframes hideBox {
+    from {
+      opacity: 1;
+    }
+    to{
+      opacity: 0;
+    }
+  }
+  &.close {
+    animation-name: hideBox;
+  }
+
+&.alertBox{
+  padding: @space;
+  width: calc(300px + $padding);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  border: double @c[mainFont];
+  border-radius: @boxRadius;
+  background-color: #fff;
+  z-index: 92;
+  & .wrapper {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    & .msg {
+      padding-bottom: @space;
+    }
+    & .close {
+      text-align: center;
+      button {
+        border: none;
+        background-color: @c[accentHard];
+        color: #fff;
+      }
+    }
+  }
+}
+}
+.popupWindow{
+  width: 100vw;
+  height: 100vh;
+  padding: @space;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(54deg, rgba(255, 131, 122, 0.25), rgba(255, 131, 122, 0) 68%), linear-gradient(241deg, rgba(34, 31, 125, 0.25), rgba(239, 152, 207, 0) 36%);
+  z-index: 90;
+  overflow: auto;
+  background-color: white;
+
+  /* Open/close animation */
+    top: -100%;
+    animation-name: showWindow;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+    @keyframes showWindow {
+      from {
+        top: -100%;
+      }
+      to{
+        top: 0;
+      }
+    }
+    @keyframes hideWindow {
+      from {
+        top: 0;
+      }
+      to{
+        top: -100%;
+      }
+    }
+    &.close {
+      animation-name: hideWindow;
+    }
+  /* **** */
+  
+  &.myWhatsapp {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(54deg, rgb(57, 149, 106), rgba(122, 255, 224, 0.64) 48%), linear-gradient(251deg, rgb(0,168,132), rgba(239, 152, 205, 0) 66%);
+    figure {
+      width: 300px;
+    }
+    button {
+      width: 100%;
+      border: none;
+      border-radius: 0;
+      margin-top: 1rem;
+      background-color: rgb(0,168,132);
+      color: #fff;
+      &:hover{
+        transform: none;
+        background-color: #fff;
+        color: @c[mainFont];
+      }
+    }
+  }
+
+  &.preloader {
+    z-index: 100;
+    & > .wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @import './bannerForm.less';
+
+}

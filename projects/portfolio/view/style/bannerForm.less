@@ -1,0 +1,214 @@
+&.bannerForm {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  & .wrapper {
+    width: 500px;
+    @media (max-width: 550px) {
+      width: 95vw;
+      .closeBtnWrapper {
+        text-align: center;
+      }
+    }
+    & .contactFormWrapper {
+      padding: @space;
+      border: solid 2px @c[mainFont];
+      border-radius: @boxRadius;
+      background-color: #fff;
+      margin-bottom: @space;
+      & .title {
+        text-align: center;
+        @media screen {
+          @media (max-width: 550px) {
+            h4 {
+              font-size: 3.5rem;
+            }
+          }
+        }
+        
+      }
+      & .contactForm {
+        display: grid;
+        grid-template-areas: 'contact form' 'message message' '... btn';
+        justify-content: space-between;
+        grid-template-columns: auto 20rem;
+        gap: @space;
+        padding-top: @space;
+        @media screen {
+          @media (max-width: 550px) {
+            padding-top: 4rem;
+            grid-template-areas: 'form' 'message' 'contact' 'btn';
+            justify-content: normal;
+            grid-template-columns: 100%;
+          }
+        }
+        & .contact {
+          grid-area: contact;
+          @media screen {
+            @media (max-width: 550px) {
+             display: grid;
+             grid-template-areas: 'phone social' 'mail social' 'mail2 social';
+             &>:nth-child(1) {
+              grid-area: phone;
+             }
+             &>:nth-child(2) {
+              grid-area: mail;
+             }
+             &>:nth-child(3) {
+              grid-area: mail2;
+             }
+             &>:nth-child(4) {
+              grid-area: social;
+             }
+            }
+          }
+          div {
+            &:nth-of-type(n+1):not(:nth-last-child(1)) {
+              margin-bottom: 1rem;
+            }
+            p {
+              a {
+                color: @c[accentHard];
+                cursor: pointer;
+              }
+              // p
+              &:nth-of-type(1) {
+                font-weight: 400;
+              }
+              // link
+              &:nth-of-type(2) {
+                font-size: 1.1rem;
+                font-weight: 300;
+                @media screen {
+                  @media (max-width: 800px) {
+                    font-size: 1.5rem;
+                  }
+                }
+              }
+            }
+            &.social {
+              margin-top: @space;
+              display: flex;
+              figure {
+                &:nth-of-type(n+1):not(:nth-last-of-type(1)) {
+                  margin-right: .5rem;
+                }
+                cursor: pointer;
+                img {
+                  width: 32px;
+                }
+                transition-duration: .2s;
+                &:hover {
+                  transform: scale(1.2);
+                  transition-duration: .3s;
+                }
+                &:active {
+                  transform: scale(.9);
+                }
+              }
+              @media screen {
+                @media (max-width: 800px) {
+                  margin-top: 4rem;
+                  figure {
+                    width: 55px;
+                    height: $width;
+                    &:nth-of-type(n+1):not(:nth-last-of-type(1)) {
+                      margin-right: 2rem;
+                    }
+                    &[social='whatsapp'] {
+                      display: none;
+                    }
+                    img {
+                      width: 100%;
+                      height: 100%;
+                    }
+                   
+                  }
+                }
+                @media (max-width: 800px) {
+                  display: block;
+                  margin-top: unset;
+                  justify-self: end;
+                  align-self: center;
+                  figure {
+                    margin-right: unset!important;
+                    margin-bottom: 2rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+        & .form {
+          grid-area: form;
+          line-height: 0;
+          div {
+            &:nth-of-type(n+1):not(:nth-last-of-type(1)) {
+              margin-bottom: 1rem;
+            }
+            label {
+              p {
+                margin-bottom: .5rem;
+                font-weight: 400;
+              }
+            }
+            input {
+              width: 100%;
+            }
+          }
+        }
+        // Detached textarea from form
+        & .message {
+          grid-area: message;
+          label {
+            p {
+              margin-bottom: .5rem;
+              font-weight: 400;
+            }
+          }
+          textarea {
+            width: 100%;
+            min-height: 150px;
+            resize: vertical;
+          };
+        }
+        // Detached submit button from form 
+        & .btn {
+          grid-area: btn;
+          justify-self: right;
+          button[disabled] {
+            opacity: .3;
+            pointer-events: none;
+          }
+        }
+        @media screen {
+          @media (max-width: 550px) {
+            & .form {
+              div {
+                label {
+                  p{
+                    font-size: 2rem;
+                  }
+                }
+                input {
+                  font-size: 2rem;
+                }
+              }
+            }
+            & .message {
+              label {
+                p{
+                  font-size: 2rem;
+                }
+              }
+              textarea {
+                font-size: 2rem;
+                min-height: 300px;
+              };
+            }
+          }
+        }
+      }
+    }
+  }
+}

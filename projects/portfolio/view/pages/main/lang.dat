@@ -1,0 +1,41 @@
+{II_pl}
+  0000000me1 [II_BEG] Innowacja i<br> doskonałość
+  0000000me2 [II_BEG] Może i moje podejście do programowania nie jest mainstream-owe, za to jego świeżości i unikalność przynoszą nadzwyczajne rezultaty... Nazywam się Bartłomiej Magierski, a to jest moje portfolio.
+  0000000me3 [II_BEG] Dane Kontaktowe
+  0000000me4 [II_BEG] Każda linijka w portfolio jest napisana od początku do końca przeze mnie, przy użyciu zwykłego, lecz zaawansowanego JS i PHP. Według mnie w programowaniu to jest jak z kwadratem i prostokątem, nie każdy programista znający framework jest w stanie programować w języku, w którym ten framework został napisany, ale każdy, kto zna język bazowy i przy jego pomocy jest w stanie samemu napisać taki framework, będzie używać i rozumieć go w pełni.
+  0000000me5 [II_BEG] Wyjątkowe podejście
+  0000000me6 [II_BEG] Siła, piękno i dusza.
+  0000000me7 [II_BEG] Całe piękno programowania tkwi w tym, że twórcę ogranicza tylko wyobraźnia, a zatem pisanie w języku bazowym ma tę przewagę, że nie jest się ograniczonym przez zamysł twórcy framework-u... jasne można robić wstawki, ale ma to wpływ na czytelność, zato pisząc od zera wszystko jest dedykowane pod aplikacje przez co czytelniejsze, bardziej uniwersalne i każdy jest w stanie to odczytać.
+  0000000me8 [II_BEG] Obecnie wszystko dąży do tego, aby programista wiedział coraz mniej o programowaniu, w sensie… starsi programiści piszą wtyczki/framework-i tak, aby projekt można było wyklikać, albo załatwić paroma linijkami co skutkuje tym ze coraz więcej aplikacji „mechaniczne” wygląda identycznie. Nie da się tego uniknąć, ponieważ wszyscy korzystają z tych samych narzędzi i reguł.
+  0000000me9 [II_BEG] Moje Projekty
+  0000000m10 [II_BEG] Parę zdań na temat portfolio
+  0000000t10 [II_BEG] Portfolio
+  000000me11 [II_BEG] Dostrzegam zalety framework-ów, lecz jak dla mnie brakuje im duszy. Jeżeli czas bądź ilość odgrywają najważniejszą rolę to jak najbardziej framework będzie zasadny. Natomiast jeżeli jest nieco więcej czasu, to warto napisać coś unikalnego, co będzie wiązane tylko z twórcą. Nie na zasadzie następna aplikacja napisana framework-iem, jak miliony innych, tylko ktoś napisał to wszystko od czystej kartki sam... musi się znać na produkcie, poświęcił czas i zasoby, bo mu zależało na odbiorcy. Reputacja rośnie w oczach.
+  000000me12 [II_BEG] Na temat
+  000000me13 [II_BEG] Całość portfolio można podzielić na 2 części, bibliotekę i projekty. W bibliotece znajdują się wszystkie pliki, które są wspólne dla projektów, że by nie kopiować ich po n razy przy najdrobniejszych zmianach. W projekcie znajdują się  te pliki i funkcje, których nie mogłem uwspólnić ze względu na to, że są unikalne dla projektu, i pliki które muszą tam być ze względu na Cross-origin resource sharing (chodzi o PHP). Te ostatnie też oryginalnie pochodzą z biblioteki, ale są kopiowane do folderu projektu po poprzez API. Nie zapomniałem o aktualizacjach, tak więc wystarczy odpowiednie żądanie wysłane do pliku "update", aby pobrał biblioteki na nowo, sam plik też można zaktualizować zapytaniem. Reszta plików z biblioteki (JS) jest pobierana z poprzez API I wczytywana do projektu w formie blob-u.
+  000000me14 [II_BEG] Przy pisaniu kładłem duży nacisk na asynchroniczność, tak aby było możliwie jak najmniej przestojów  spowodowanych tym, że coś się pobiera albo coś na coś czeka.
+  000000me15 [II_BEG] Zapytania Ajax są przeniesione na inny wątek, ponieważ w przeglądarce jest coś takiego jak maksymalna liczba aktywnych zapytań na wątek.<br> Przygotowanie pakietów językowych (Regexp) jest przeniesione na inny wątek, aby wątek główny nie musiał czekać, ponieważ nie jest to konieczne... tłumaczenie węzła może być asynchroniczne. Aby nie zapychać CPU, liczba używanych wątków może zostać ograniczona na podstawie maksymalej ich liczby.
+  000000me16 [II_BEG] Całość ruchu odbywa się w vDOM, przy minimalnym kontakcie z DOM. Nazwa z REACT.JS, bo pasuje i działanie jest takie samo, ale napisane przeze mnie.
+  000000me17 [II_BEG] Pliki językowe są poza plikami HTM, tak że w html jest tylko szablon.
+  0000000t11 [II_BEG] portfolioPOL
+
+{II_en}
+  0000000me1 [II_BEG] Innovation and<br>excellence
+  0000000me2 [II_BEG] My approach to programming may not be mainstream, but its freshness and uniqueness bring extraordinary results... My name is Bartłomiej Magierski and this is my portfolio.
+  0000000me3 [II_BEG] Contact details
+  0000000me4 [II_BEG] Every line in portfolio is written from start to finish by me, using plain but advanced JS and PHP. In my opinion, programming is like a square and a rectangle, not every programmer who knows the framework is able to program in the language in which the framework was written, but everyone who knows the base language and is able to write such a framework themselves will be able to use/understand it in full.
+  0000000me5 [II_BEG] A Unique Approach
+  0000000me6 [II_BEG] Strength, Beauty and Soul.
+  0000000me7 [II_BEG] The beauty of programming lies in the fact that the creator is limited only by his imagination, so writing in the base language has the advantage of not being limited by the intention of the creator of the framework... of course, you can make inserts, but it affects readability, but by writing from scratch, everything is dedicated to applications, which makes it more readable, more universal and everyone can read it.
+  0000000me8 [II_BEG] Writing in the base language has the advantage that you are not limited by the intention of the creator of the framework... of course, you can make inserts, but this affects readability, but when writing from scratch, everything is dedicated to the applications, which makes them more readable, more universal and everyone is in able to read it.
+  0000000me9 [II_BEG] My Projects
+  0000000m10 [II_BEG] A few words about the portfolio
+  0000000t10 [II_BEG] Portfolio
+  000000me11 [II_BEG] I see the advantages of frameworks, but for me they lack soul. If time or quantity play the most important role, the framework will definitely be justified. However, if you have a bit more time, it is worth writing something unique that will be associated only with the creator. Not just another application written with a framework, like millions of others, but someone wrote it all from a blank piece of paper himself... he must know the product, he devoted time and resources because he cared about the recipient. Reputation grows before your eyes.
+  000000me12 [II_BEG] About Project
+  000000me13 [II_BEG] The entire portfolio can be divided into 2 parts, the library and the projects. The library contains all files that are common to projects, so as not to copy them n times with the smallest changes. There are files and functions in the project that I could not share because they are unique to the project, and files that must be there due to Cross-origin resource sharing (this is about PHP). The latter also come originally from the library, but are copied to the project folder via the API. I didn't forget about updates, so all you need is an appropriate request sent to the "update" file to download the libraries again, and the file itself can also be updated with a query. The rest of the files from the library (JS) are downloaded from the API and loaded into the project in the form of a blob.
+  000000me14 [II_BEG] When writing, I placed great emphasis on asynchrony, so that there would be as little downtime as possible caused by something downloading or something waiting for something.
+  000000me15 [II_BEG] Ajax queries are moved to another thread because the browser has such a thing as a maximum number of active queries per thread. The preparation of language packs (Regexp) is moved to another thread so that the main thread does not have to wait as it is not necessary... node translation can be asynchronous. In order not to clog the CPU, the number of threads used can be limited based on the maximum number of threads.
+  000000me16 [II_BEG] All traffic happens in vDOM, with minimal contact with the DOM. The name is from REACT.JS, because it fits and the operation is the same, but written by me.
+  000000me17 [II_BEG] The language files are outside the HTM files, so there is only a template in the html.
+  0000000t11 [II_BEG] portfolioENG

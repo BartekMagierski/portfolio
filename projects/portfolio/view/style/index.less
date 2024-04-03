@@ -1,0 +1,170 @@
+@import './reset.less';
+@font-face {
+  font-family: "Truculenta";
+  src: url("./font/Truculenta/Truculenta-VariableFont_opsz\,wdth\,wght.ttf");
+}
+@font-face {
+  font-family: "PlaypenSans";
+  src: url("./font/Playpen_Sans/PlaypenSans-VariableFont_wght.ttf");
+}
+
+@c: {
+  mainFont: #1d1d1d;
+  secondFont: #fff;
+  accent: #eeae87c4;
+  accentHard: #b0531a;
+  error: #db3434e0;
+  grayBox: #d2d2d28f;
+  button1: #f7dddc;
+}
+
+@boxRadius: 4px;
+@space: 2rem;
+
+html {
+  font-size: 62.5%;
+  @media screen {
+    @media (max-width: 800px) {
+      font-size: 55%;
+    }
+  }
+}
+
+
+body {
+  font-family: PlaypenSans, sans-serif;
+  color: @c[mainFont];
+  h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: Truculenta, sans-serif;
+    @media screen {
+      @media (max-width: 800px) {
+        font-size: 5rem;
+      }
+    }
+  }
+  h3 {
+    font-weight: 500;
+    font-size: 3rem;
+    font-family: Truculenta, sans-serif;
+  }
+  h4 {
+    font-weight: 500;
+    font-size: 2.4rem;
+    font-family: Truculenta, sans-serif;
+  }
+  p {
+    font-size: 1.4rem;
+    font-weight: 301;
+    line-height: 1.3em;
+    letter-spacing: .05em;
+    @media screen {
+      @media (max-width: 800px) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  label {
+    // If this is label for form field and it it required
+    p{
+      &[req]::after {
+        content: '\002A';
+      }
+    }
+  }
+  input {
+    padding: .3em .8em;
+    font-size: 1.2rem;
+    letter-spacing: .08em;
+    box-sizing: border-box;
+    font-family: PlaypenSans, sans-serif;
+    &.fail{
+      border-color: @c[error];
+    }
+  }
+  textarea {
+    font-size: 1.2rem;
+    padding: .3em .5em;
+    letter-spacing: .08em;
+    box-sizing: border-box;
+    resize: none;
+    font-family: PlaypenSans, sans-serif;
+    &.fail{
+      border-color: @c[error];
+    }
+  }
+  button {
+    padding: .3em 1em;
+    border: solid 2px @c[mainFont];
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition-duration: .2s;
+    color: @c[mainFont];
+    background-color: transparent;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+      transition-duration: .3s;
+    }
+    &:active{
+      transform: scale(1);
+    }
+    @media screen {
+      @media (max-width: 800px) {
+        padding: .8em 2em;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .fake {
+    display: contents;
+  }
+
+  .langSwitch {
+    position: fixed;
+    left: .5rem;
+    bottom: .5rem;
+    z-index: 99;
+    & > .wrapper {
+      display: grid;
+      gap: .5rem;
+      button {
+        width: 100%;
+        padding: .25em;
+        background-color: #fff;
+        &.active {
+          background-color: @c[accentHard];
+          color: #fff;
+          pointer-events: none
+        }
+      }
+    }
+    @media screen {
+      @media (max-width: 800px) {
+        & > .wrapper {
+          button {
+            padding: .7rem;
+          }
+        }
+      }
+    }
+  }
+
+  @contentWidth: 70rem; 
+
+
+  @import './popup.less';
+
+  main {
+    @import './parts/main.less';
+  }
+
+  footer {
+    width: 100vw;
+    @import './parts/footer.less';
+  }
+}
+

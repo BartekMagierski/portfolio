@@ -1,0 +1,17 @@
+{
+  "title": "B.Magierski",
+  "alertBoxId": "alertBox",
+  "defaultLanguage": "pl",
+  "homePage": "main",
+  "availableLanguages": [
+    {
+      "id": "pl",
+      "label": "PL",
+      "name": "Polish"
+    }, {
+      "id": "en",
+      "label": "EN",
+      "name": "English"
+    }
+  ]
+}

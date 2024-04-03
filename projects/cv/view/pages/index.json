@@ -1,0 +1,19 @@
+{
+  "list": {
+    "cv": {
+      "id": "cv",
+      "template": "../view/pages/cv/template.html",
+      "extraCfg": null,
+      "lang": "../view/pages/cv/lang.dat",
+      "describe": "My CV",
+      "label": null,
+      "title": "0000000019",
+      "url": "0000000020",
+      "css": {
+        "mainHead": null,
+        "mainBody": "default",
+        "mainFoot": "default"
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "templates": {
+    "default": "../view/other/portfolio/templates/default.html" 
+  },
+  "list": [
+    {
+      "id": "cv",
+      "template": "default",
+      "cfg": {
+        "poster": "../view/other/portfolio/img/cv.webp",
+        "href": "http://127.0.0.1:5001/",
+        "title": "0000000002"
+      }
+    }
+  ]
+}

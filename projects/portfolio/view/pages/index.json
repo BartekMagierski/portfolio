@@ -1,0 +1,19 @@
+{
+  "list": {
+    "main": {
+      "id": "main",
+      "template": "../view/pages/main/template.html",
+      "extraCfg": null,
+      "lang": "../view/pages/main/lang.dat",
+      "describe": "home page",
+      "label": null,
+      "url": "0000000t11",
+      "title": "0000000t10",
+      "css": {
+        "mainHead": null,
+        "mainBody": "main",
+        "mainFoot": "default"
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "list": {
+    "form": {
+      "id": "form",
+      "template": "R>../view/other/form/default/index.html",
+      "lang": "R>../view/other/form/default/lang.dat",
+      "cfg": {
+        "regexpFailMsg": "00000msg13"
+      }
+    },
+    "bannerform_popup": {
+      "id": "bannerform_popup",
+      "template": "R>../view/other/bannerForm_popup/index.html",
+      "lang": "R>../view/other/bannerForm_popup/lang.dat",
+      "skipInitial": true,
+      "cfg": {
+        "social": {
+          "linkedin": "https://www.linkedin.com/in/bartłomiej-magierski-a58799293",
+          "facebook": "https://www.facebook.com/profile.php?id=100010462094176"
+        }
+      }
+    },
+    "myWhatsapp": {
+      "id": "myWhatsapp",
+      "template": "R>../view/other/myWhatsapp/index.html",
+      "lang": "R>../view/other/myWhatsapp/lang.dat",
+      "cfg": null,
+      "skipInitial": true
+    },
+    "alertBox": {
+      "id": "alertBox",
+      "template": "R>../view/other/popupBox/alert/index.html",
+      "lang": "R>../view/other/popupBox/alert/lang.dat",
+      "cfg": null,
+      "skipInitial": true
+    },
+    "footers": {
+      "id": "footers",
+      "extended": "templates",
+      "lang": "R>../view/other/footers/lang.dat",
+      "cfg": "R>../view/other/footers/index.json"
+    },
+    "portfolio": {
+      "id": "portfolio",
+      "extended": "templates",
+      "lang": "R>../view/other/portfolio/lang.dat",
+      "cfg": "R>../view/other/portfolio/index.json"
+    },
+    "preloader": {
+      "id": "preloader",
+      "template": "R>../view/other/loader/loader1.html",
+      "extended": null,
+      "lang": null,
+      "cfg": null
+    }
+  }
+}

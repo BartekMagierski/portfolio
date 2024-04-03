@@ -1,0 +1,11 @@
+RewriteEngine on
+
+###########################################
+############ URL for JS engine ############
+###########################################
+
+RewriteCond %{REQUEST_URI} /[^+$] [NC]
+RewriteCond %{REQUEST_URI} !/[.]html|css|less|png|jpg|jpeg|svg|gif|ttf|json|js|php|pl|webp [NC]
+RewriteRule ^(.*)$ /?p=$1+ [R=301,L]
+
+#------------------------------------------

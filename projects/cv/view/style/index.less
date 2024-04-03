@@ -1,0 +1,89 @@
+@import './reset.less';
+@font-face {
+  font-family: "Sono";
+  src: url("./font/Sono/Sono-VariableFont_MONO\,wght.ttf");
+}
+@font-face {
+  font-family: "Noto";
+  src: url("./font/Noto_Sans/NotoSans-VariableFont_wdth\,wght.ttf");
+}
+
+
+@c: {
+  font1: #824343d6;
+  font2: #713511;
+  boxBack1: #d79b781c;
+  boxBack2: #e9ecf8;
+  grayBox: #e6e6e6;
+}
+
+html {
+  font-size: 62.5%;
+}
+@space: 1rem;
+
+body {
+  background-color: #e3e3e3;
+  text-align: center;
+  font-family: 'Sono', sans-serif;
+
+  h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+  h3 {
+    font-size: 2.2rem;
+    font-weight: 400;
+  }
+  h4 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    letter-spacing: .05rem;
+    font-family: Noto, sans-serif;
+  }
+  .nobr {
+    white-space: nowrap;
+  }
+
+  .langSwitch {
+    position: fixed;
+    left: .5rem;
+    bottom: .5rem;
+    z-index: 99;
+    & > .wrapper {
+      display: grid;
+      gap: .5rem;
+      button {
+        width: 100%;
+        padding: .25em;
+        background-color: #fff;
+        border: solid 2px @c[font1] ;
+        cursor: pointer;
+        transition-duration: .5s;
+        &.active {
+          background-color: @c[font2];
+          color: #fff;
+          pointer-events: none
+        }
+      }
+    }
+  }
+
+  @import './popup.less';
+
+  main {
+    width: 210mm;
+    margin: auto;
+    @import './parts/main.less';
+  }
+
+  footer {
+    width: 210mm;
+    margin: auto;
+    @import './parts/footer.less';
+  }
+
+}

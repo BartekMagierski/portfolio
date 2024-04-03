@@ -1,0 +1,31 @@
+&[css='default'] {
+  padding: .5rem;;
+  background-color: @c[grayBox];
+  box-sizing: border-box;
+  .wrapper{
+    width: @contentWidth;
+    margin: auto;
+    text-align: right;
+    p {
+      font-size: .7rem;
+      @media screen {
+        @media (max-width: 800px) {
+          font-size: .1rem;
+        }
+        @media (max-width: 670px) {
+          font-size: 1rem;
+        }
+      }
+    }
+    @media screen {
+      @media (max-width: 800px) {
+        width: 100%;
+        p {
+          font-size: 1rem;
+        }
+        
+      }
+     
+    }
+  }
+}
