@@ -193,6 +193,7 @@ class Portfolio extends NavExtra {
         refs  = temp.get(Core.findRef(vNode, false, false, "ref", true));
         project["vNode"] = vNode;
         project["refs"]  = refs;
+
         refs.title.setAttribute("trn", project.cfg.title);
         refs.go.setAttribute("go", project.cfg.href);  
         refs.poster.setAttribute("src", project.cfg.poster)

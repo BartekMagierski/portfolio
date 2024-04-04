@@ -4,7 +4,10 @@
   await window.Build.init()
   await window.NavBasic.isReady();
 
-  window.NavExtra.setupBannerForm()
+  
+
+  window.NavExtra.setupBannerForm();
+
   Reflect.set(window, "Portfolio", new Portfolio());
   window.Portfolio.init();
 
@@ -12,6 +15,3 @@
   Core.rmoInitialLoader();
 
 })();
-
-
-
