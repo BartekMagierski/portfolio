@@ -39,8 +39,8 @@ body {
     font-weight: bold;
     font-family: Truculenta, sans-serif;
     @media screen {
-      @media (max-width: 800px) {
-        font-size: 5rem;
+      @media (max-width: 1000px) {
+        font-size: 10vw;
       }
     }
   }
@@ -48,11 +48,21 @@ body {
     font-weight: 500;
     font-size: 3rem;
     font-family: Truculenta, sans-serif;
+    @media screen {
+      @media (max-width: 1000px) {
+        font-size: 6vw;
+      }
+    }
   }
   h4 {
     font-weight: 500;
     font-size: 2.4rem;
     font-family: Truculenta, sans-serif;
+    @media screen {
+      @media (max-width: 1000px) {
+        font-size: 4vw;
+      }
+    }
   }
   p {
     font-size: 1.4rem;
@@ -60,8 +70,8 @@ body {
     line-height: 1.3em;
     letter-spacing: .05em;
     @media screen {
-      @media (max-width: 800px) {
-        font-size: 1.8rem;
+      @media (max-width: 1000px) {
+        font-size: 3vw;
       }
     }
   }
@@ -82,6 +92,12 @@ body {
     &.fail{
       border-color: @c[error];
     }
+    @media screen {
+      @media (max-width: 1000px) {
+        font-size: 4vw;
+        border: solid @c[mainFont];
+      }
+    }
   }
   textarea {
     font-size: 1.2rem;
@@ -93,10 +109,16 @@ body {
     &.fail{
       border-color: @c[error];
     }
+    @media screen {
+      @media (max-width: 1000px) {
+        font-size: 4vw;
+        border: solid @c[mainFont];
+      }
+    }
   }
   button {
     padding: .3em 1em;
-    border: solid 2px @c[mainFont];
+    border: solid @c[mainFont];
     border-radius: 4px;
     font-size: 1.4rem;
     font-weight: 600;
@@ -112,9 +134,9 @@ body {
       transform: scale(1);
     }
     @media screen {
-      @media (max-width: 800px) {
-        padding: .8em 2em;
-        font-size: 1.6rem;
+      @media (max-width: 1000px) {
+        padding: .75em 2em;
+        font-size: 3vw;
       }
     }
   }
@@ -143,10 +165,13 @@ body {
       }
     }
     @media screen {
-      @media (max-width: 800px) {
+      @media (max-width: 1000px) {
+        opacity: .8;
         & > .wrapper {
+          gap: 2em;
           button {
-            padding: .7rem;
+            font-size: 4rem;
+          
           }
         }
       }
@@ -154,6 +179,19 @@ body {
   }
 
   @contentWidth: 70rem; 
+
+
+  @media screen {
+    @media (max-width: 1000px) {
+      & > .content {
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        grid-template-rows: 0 auto auto;
+      }
+    }
+  }
+  
 
 
   @import './popup.less';

@@ -8,24 +8,20 @@
     text-align: right;
     p {
       font-size: .7rem;
-      @media screen {
-        @media (max-width: 800px) {
-          font-size: .1rem;
-        }
-        @media (max-width: 670px) {
-          font-size: 1rem;
-        }
-      }
-    }
-    @media screen {
-      @media (max-width: 800px) {
-        width: 100%;
-        p {
-          font-size: 1rem;
-        }
-        
-      }
-     
     }
   }
+  @media screen {
+    @media (max-width: 1000px) {
+      padding: 2vw 4vw;
+      .wrapper {
+        width: auto;
+        margin: unset;
+        p {
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+
+
 }

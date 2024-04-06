@@ -26,7 +26,7 @@
 				</div>
 			</div>
 
-			<section  ref="mainContent">
+			<section  class="content" ref="mainContent">
 				<header ref="mainHead"></header>
 				<main   ref="mainBody"></main>
 				<footer ref="mainFoot"></footer>
