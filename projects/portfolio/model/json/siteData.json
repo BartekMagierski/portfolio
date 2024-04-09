@@ -1,6 +1,7 @@
 {
   "title": "B.Magierski",
-  "alertBoxId": "alertBox",
+  "alertBoxID": "alertBox",
+  "waitBoxID": "waitBox",
   "defaultLanguage": "pl",
   "homePage": "main",
   "availableLanguages": [

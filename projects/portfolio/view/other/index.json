@@ -5,7 +5,7 @@
       "template": "R>../view/other/form/default/index.html",
       "lang": "R>../view/other/form/default/lang.dat",
       "cfg": {
-        "regexpFailMsg": "00000msg13"
+        "notValid": "00000msg13"
       }
     },
     "bannerform_popup": {
@@ -52,6 +52,14 @@
       "extended": null,
       "lang": null,
       "cfg": null
+    },
+    "waitBox": {
+      "id": "waitBox",
+      "template": "R>../view/other/popupBox/waitBox/index.html",
+      "extended": null,
+      "lang": "R>../view/other/popupBox/waitBox/lang.dat",
+      "cfg": null,
+      "skipInitial": true
     }
   }
 }

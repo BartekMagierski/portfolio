@@ -54,7 +54,7 @@ class Build {
 			this.callID = ID;
 			this.callName = name;
 		}
-
+		
 		[
 
 			new Requests("GetCore"      , "core"     ),
@@ -126,19 +126,18 @@ class Build {
 
 		});
 
-		await this.waitForScriptsToLoad();
+		return this.waitForScriptsToLoad().then(function() {
 
-		Reflect.set(window, "Form", new Form());
-    Reflect.set(window, "Popup", new Popup());
-		Reflect.set(window, "Language", new Language());
-		Reflect.set(window, "NavExtra", new NavExtra());
-		Reflect.set(window, "NavBasic", new NavBasic());
+			Reflect.set(window, "Form", new Form());
+			Reflect.set(window, "Popup", new Popup());
+			Reflect.set(window, "Language", new Language());
+			Reflect.set(window, "NavExtra", new NavExtra());
+			Reflect.set(window, "NavBasic", new NavBasic());
+			
+			window.NavBasic.init();
+			window.Language.initSwitch();
 
-		window.NavBasic.init();
-		window.Language.initSwitch();
-
-		let DOMref = Core.findRef(document.body, false, false, "ref", true);
-    window.NavBasic.register.DOMref = temp.get(DOMref);		
+		}).catch( function(e) { alert(`Critical error\n${e}`); });
 
 	}
 

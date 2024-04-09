@@ -1,12 +1,13 @@
 {II_pl}
   0000000001 [II_BEG] Zamknij
-  00000msg11 [II_BEG] Wiadomość została wysłana... ale tak naprawdę nie została :)
-  00000msg12 [II_BEG] Wiadomość nie została wysłana, Przepraszam
+  00000msg11 [II_BEG] Wiadomość została wysłana
+  00000msg12 [II_BEG] Wiadomość nie została wysłana z powodu błędu serwera
   00000msg13 [II_BEG] Formularz zawiera błędnie wypełnione pola obowiązkowe
- 
+  00000msg14 [II_BEG] Wiadomość została by wysłana... ale serwer nie jest poprawnie skonfigurowany
  
 {II_en}
  0000000001 [II_BEG] Close
- 00000msg11 [II_BEG] The message was sent... but it really wasn't :)
- 00000msg12 [II_BEG] The message was not sent, sorry
+ 00000msg11 [II_BEG] The message was sent
+ 00000msg12 [II_BEG] The message was not sent due to a server error
  00000msg13 [II_BEG] The form contains incorrectly completed mandatory fields
+ 00000msg14 [II_BEG] The message would be sent... but the server is not configured correctly

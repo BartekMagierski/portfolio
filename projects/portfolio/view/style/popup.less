@@ -1,6 +1,9 @@
 .popupBox {
   position: fixed;
   z-index: 91;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   /* Open/close animation */
   opacity: 0;
@@ -28,52 +31,74 @@
     animation-name: hideBox;
   }
 
-&.alertBox{
-  padding: @space;
-  width: calc(300px + $padding);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-sizing: border-box;
-  border: double @c[mainFont];
-  border-radius: @boxRadius;
-  background-color: #fff;
-  z-index: 92;
-  & .wrapper {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    & .msg {
-      padding-bottom: @space;
+  &.alertBox{
+    padding: @space;
+    width: calc(300px + $padding);
+    box-sizing: border-box;
+    border: double @c[mainFont];
+    border-radius: @boxRadius;
+    background-color: #fff;
+    z-index: 92;
+    & .wrapper {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      & .msg {
+        padding-bottom: @space;
+      }
+      & .close {
+        text-align: center;
+        button {
+          border: none;
+          background-color: @c[accentHard];
+          color: #fff;
+        }
+      }
     }
-    & .close {
-      text-align: center;
-      button {
-        border: none;
-        background-color: @c[accentHard];
-        color: #fff;
+
+    @media screen {
+      @media (max-width: 1000px) {
+        padding: 4vw;
+        width: 90%;
+        & .wrapper {
+          & .msg {
+            padding-bottom: 4vw;
+          }
+          & .close {
+            text-align: right;
+          
+          }
+        }
+
+      }
+    }
+
+  }
+  &.waitBox {
+    border: solid @c[mainFont];
+    background-color: #fff;
+    padding: 4rem;
+    .wrapper {
+      figure {
+        figcaption {
+          margin-top: 4rem;
+          text-align: center;
+        }
+      }
+    }
+    @media screen {
+      @media (max-width: 1000px) {
+        padding: 5vw;
+        .wrapper {
+          figure {
+            figcaption {
+              margin-top: 5vw;
+            }
+          }
+        }
       }
     }
   }
-
-  @media screen {
-    @media (max-width: 1000px) {
-      padding: 4vw;
-      width: 90%;
-      & .wrapper {
-        & .msg {
-          padding-bottom: 4vw;
-        }
-        & .close {
-          text-align: right;
-         
-        }
-      }
-
-    }
-  }
-
-}
 }
 .popupWindow {
   width: 100vw;

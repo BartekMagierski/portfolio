@@ -102,18 +102,37 @@ if(isset($_GET['call']) && !empty($_GET['call'])) {
     switch($_POST['call']) {
 
       case 'SendContactForm':
-        $response = array (
-          'status'   => 'success',
-          'data' => '00000msg11'
-        );
+
+        if(is_dir(!'./mail')) {
+          response('success', '00000msg14', FALSE);
+          exit;
+        }
+
+        try {
+          
+          $name    = !empty($_POST['name'])? $_POST['name'] : 'Unset';
+          $email   = !empty($_POST['mail']) ? $_POST['mail'] : 'Unset';
+          $phone   = !empty($_POST['phone']) ? $_POST['phone'] : 'Unset';
+          $message = !empty($_POST['msg'])    ? $_POST['msg']    : 'Unset';
+          $company = !empty($_POST['company']) ? $_POST['company'] : 'Unset';
+         
+          
+          include_once './mail/mail.php';
+          $mail->send();
+          response('success', '00000msg11', FALSE);
+         
+        } catch(Exception $e) {
+
+            response('failure', '00000msg12', FALSE);
+            
+        }
+
       break;
 
       default:
         response('failure', 'Wrong POST request format (call undefined)', FALSE); 
       break;
     }
-
-    echo json_encode($response);
 
 }
 

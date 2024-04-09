@@ -4,8 +4,6 @@
   await window.Build.init()
   await window.NavBasic.isReady();
 
-  
-
   window.NavExtra.setupBannerForm();
 
   Reflect.set(window, "Portfolio", new Portfolio());
