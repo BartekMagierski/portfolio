@@ -1,6 +1,6 @@
 <?php
 
-$GLOBALS['parentPath'] =  $_SERVER['SERVER_ADDR'].':80';
+$GLOBALS['parentPath'] =  $_SERVER['SERVER_ADDR'].':81';
 $GLOBALS['basePath']   = $_SERVER['SERVER_ADDR'].$_SERVER['SERVER_PORT'];
 
 include_once '../requests.php';

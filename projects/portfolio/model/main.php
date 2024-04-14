@@ -1,6 +1,6 @@
 <?php
 header('Access-Control-Allow-Origin:'.$_SERVER['SERVER_ADDR'].$_SERVER['SERVER_PORT']);
-$GLOBALS['parentPath'] = $_SERVER['SERVER_ADDR'].':80';
+$GLOBALS['parentPath'] = $_SERVER['SERVER_ADDR'].':81';
 $GLOBALS['basePath']   = $_SERVER['SERVER_ADDR'].$_SERVER['SERVER_PORT'];
 $response;
 
