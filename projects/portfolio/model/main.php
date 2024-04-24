@@ -9,6 +9,7 @@ $update = true;
 include_once './core.php';
 include_once './requests.php';
 include_once './sharedLibs.php';
+if(is_dir('./accounts')) include_once './accounts/routes.php';
 
 if(isset($_GET['call']) && !empty($_GET['call'])) {
   switch($_GET['call']) {

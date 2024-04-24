@@ -8,8 +8,23 @@
       "template": "default",
       "cfg": {
         "poster": "../view/other/portfolio/img/cv.webp",
-        "href": "http://127.0.0.1:5001/",
+        "link": {
+          "type": "localPort",
+          "href": "5001/"
+        },
         "title": "0000000002"
+      }
+    },
+    {
+      "id": "task1",
+      "template": "default",
+      "cfg": {
+        "poster": "../view/other/portfolio/img/task1.webp",
+        "link": {
+          "type": "localPort",
+          "href": "5002/"
+        },
+        "title": "0000000003"
       }
     }
   ]

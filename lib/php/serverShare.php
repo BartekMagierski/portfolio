@@ -27,6 +27,10 @@
         'updateCall' => './update/updateCall.php',
         'requestsLib' => './requests.php',
         'clientShare' => './clientShare.php',
+        'accounts' => (object) array(
+          'js' => '../../modules/accounts/model/js/index.js',
+          'php' => '../../modules/accounts/model/php/share/clientSide.php'
+        ),
         'language' => (object) array(
           'class' => '../js/language/class.js',
           'worker' => '../js/language/worker.js',
@@ -115,6 +119,28 @@
         case 'installLib': $key === '228' ? $requestFile():$wrongKey();  break;
         case 'requestsLib': $key === '673' ? $requestFile():$wrongKey();  break;
         case 'clientShare': $key === '2891' ? $requestFile():$wrongKey();  break;
+        case 'accountsJS':
+          
+          if($key !== '567') $wrongKey();
+
+          if(!property_exists($this->routes, 'accounts')) throw new ShareException("Missing accounts module routes");
+          if(!property_exists($this->routes->accounts, 'js')) throw new ShareException('Missing route for accounts JS file');
+
+          $file = new File();
+          $this->response = $file->read($this->routes->accounts->js, NULL);
+          
+        break;
+        case 'accountsPHP': 
+          
+          if($key !== '532') $wrongKey();
+
+          if(!property_exists($this->routes, 'accounts')) throw new ShareException("Missing accounts module routes");
+          if(!property_exists($this->routes->accounts, 'php')) throw new ShareException('Missing route for accounts PHP file');
+
+          $file = new File();
+          $this->response = $file->read($this->routes->accounts->php, NULL);
+          
+        break;
         case 'language': 
           if($key === '53') {
   

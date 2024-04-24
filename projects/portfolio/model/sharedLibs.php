@@ -63,6 +63,16 @@ try {
           )
         ), FALSE);
       break;
+      case 'loadAccounts':
+        response('success', Request::getSharedFile( 
+          array(
+            'secret' => 22,
+            'return' => 'base64',
+            'fetch'  => 'accountsJS',
+            'key'    => 567
+          )
+        ), FALSE);
+      break;
       default:
         response("failure", "No such definition in shared lib", FALSE);
       break;

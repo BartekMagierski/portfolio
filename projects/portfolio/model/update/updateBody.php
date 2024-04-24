@@ -51,6 +51,19 @@ function fetchInitialLibs() {
         )
       );
     }
+    // That file contains routes for accounts
+    if(isset($_POST['Accounts']) && $_POST['Accounts'] == TRUE) {
+      $accountsRoutes = Request::getSharedFile( 
+        array (
+          'secret' => 22,
+          'return' => 'base64',
+          'fetch'  => 'accountsPHP',
+          'key'    => 532
+        )
+      );
+    }
+    
+
   } catch(RequestException $e) {
       throw new UpdateException("Installation failed, reason Request: ".$e->getMessage());
   }
@@ -80,6 +93,19 @@ function fetchInitialLibs() {
       fclose($file);
       chmod("../../controller/navExtra.js", 774);
       chown("../../controller/navExtra.js", 'bartek');
+    }
+
+    if(isset($_POST['Accounts']) && $_POST['Accounts'] == TRUE) {
+      
+      if(!is_dir('../accounts')) {
+        mkdir('../accounts', 0774, true);
+        mkdir('../accounts/data');
+      }
+      
+      $file = fopen('../accounts/routes.php', 'w') or die("Unable to open file!");
+      fwrite($file, $accountsRoutes);
+      fclose($file);
+    
     }
 
   } catch(FileException) {

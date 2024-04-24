@@ -186,13 +186,13 @@ class Portfolio extends NavExtra {
       } else return true;
     }).forEach( async (project) => {
     
-        vNode = cfg.templates[project.template].vNode;
+        vNode = cfg.templates[project.template].vNode.cloneNode(true);
         refs  = temp.get(Core.findRef(vNode, false, false, "ref", true));
         project["vNode"] = vNode;
         project["refs"]  = refs;
 
         refs.title.setAttribute("trn", project.cfg.title);
-        refs.go.setAttribute("go", project.cfg.href);  
+        refs.go.dataset.go = JSON.stringify(project.cfg.link);  
         refs.poster.setAttribute("src", project.cfg.poster)
         temp.get(projects)[project.id] = project; 
         window.Language.translate("node", lang, vNode);
@@ -201,9 +201,12 @@ class Portfolio extends NavExtra {
 
     container.addEventListener("click", function(event) {
       let target = event.target;
-      if(target.localName === "button" && target.hasAttribute("go")) {
-        let link = target.getAttribute("go");
-        window.open(link, '_blank');
+      if(target.localName === "button" && target.hasAttribute("data-go")) {
+        let link = JSON.parse(target.dataset.go);
+        console.log(addr, link);
+        if(link.type === "localPort") {
+          window.open(`${Protocol}//${Host}:${link.href}`, '_blank');
+        }
       }
     });
 

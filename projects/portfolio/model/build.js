@@ -33,6 +33,7 @@ class Build {
 			let call = inCoreShare ? `callCore=${ID}`:`call=${ID}`;
 			return new Promise(function(res, rej){
 				let req = new XMLHttpRequest();
+				console.info(`GET ${MainPhp}?${call}`);
 				req.addEventListener("load", reqListener);
 				req.open("GET", `${MainPhp}?${call}`);
 				req.send();
@@ -54,7 +55,7 @@ class Build {
 			this.callID = ID;
 			this.callName = name;
 		}
-
+		
 		[
 
 			new Requests("GetCore"      , "core"     ),
@@ -133,7 +134,7 @@ class Build {
 			Reflect.set(window, "Language", new Language());
 			Reflect.set(window, "NavExtra", new NavExtra());
 			Reflect.set(window, "NavBasic", new NavBasic());
-
+			
 			window.NavBasic.init();
 			window.Language.initSwitch();
 

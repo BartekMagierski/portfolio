@@ -12,4 +12,6 @@
   Core.findInitialURL();
   Core.rmoInitialLoader();
 
+  //Core.loadAccounts();
+
 })();
